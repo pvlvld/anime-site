@@ -1,0 +1,188 @@
+<template>
+  <div class="min-h-[10rem] blur-3xl bg-blue-500 blue"></div>
+  <div class="min-h-[10rem] blur-3xl bg-yellow-300 yellow"></div>
+</template>
+
+<style scoped>
+:root {
+  --bg: #f0dba5;
+  --text: #151515;
+  --yellow: #edb74d;
+  --red: #eb6666;
+  --green: #6fb18a;
+}
+
+body {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3em;
+
+  background-color: var(--bg);
+  margin: 0 10em;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: normal;
+  margin: 0;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body::before,
+body::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  opacity: 40%;
+}
+
+body::before {
+  background: #8c8c8c;
+  filter: url(#noiseFilter);
+}
+
+/* Blobs */
+.blob-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+  height: 500px;
+  width: 500px;
+  position: relative;
+  right: 5em;
+}
+
+.blob {
+  border-radius: 100px;
+  filter: blur(60px);
+}
+
+.yellow {
+  position: absolute;
+  /* top: 200px; */
+  /* left: 100px; */
+  height: 16vh;
+  width: 16vw;
+
+  animation: yellow 8s infinite ease;
+}
+
+.blue {
+  position: absolute;
+  /* top: 0px; */
+  /* right: 0vh; */
+  height: 16vh;
+  width: 16vw;
+
+  animation: 8s infinite ease;
+}
+
+.red {
+  background-color: var(--red);
+  position: absolute;
+  right: 0;
+  /* top: 300px; */
+  height: 16vh;
+  width: 16vw;
+
+  animation: red 8s infinite linear;
+}
+
+@keyframes blue {
+  0% {
+    top: 200px;
+    left: 100px;
+    transform: scale(1);
+  }
+  30% {
+    top: 300px;
+    left: 150px;
+    transform: scale(1.2);
+  }
+  60% {
+    top: 100px;
+    left: 200px;
+    transform: scale(1.3);
+  }
+  100% {
+    top: 200px;
+    left: 100px;
+    transform: scale(1);
+  }
+}
+
+@keyframes yellow {
+  0% {
+    top: 80px;
+    right: -20px;
+    transform: scale(1.2);
+  }
+  30% {
+    top: 300px;
+    right: -20px;
+    transform: scale(1);
+  }
+  60% {
+    top: 200px;
+    right: 100px;
+    transform: scale(1);
+  }
+  100% {
+    top: 80px;
+    right: -20px;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes red {
+  0% {
+    top: 250px;
+    right: 0px;
+    transform: scale(1);
+  }
+  30% {
+    top: 150px;
+    right: 150px;
+    transform: scale(1.4);
+  }
+  60% {
+    top: 250px;
+    right: 100px;
+    transform: scale(1);
+  }
+  100% {
+    top: 250px;
+    right: 0px;
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    margin: 1em;
+  }
+}
+</style>
