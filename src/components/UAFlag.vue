@@ -4,88 +4,12 @@
 </template>
 
 <style scoped>
-:root {
-  --bg: #f0dba5;
-  --text: #151515;
-  --yellow: #edb74d;
-  --red: #eb6666;
-  --green: #6fb18a;
-}
-
-body {
-  height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 3em;
-
-  background-color: var(--bg);
-  margin: 0 10em;
-}
-
-h1 {
-  font-size: 60px;
-  font-weight: normal;
-  margin: 0;
-}
-
-h2 {
-  font-size: 32px;
-}
-
-p {
-  font-size: 20px;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-body::before,
-body::after {
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: '';
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-
-  opacity: 40%;
-}
-
-body::before {
-  background: #8c8c8c;
-  filter: url(#noiseFilter);
-}
-
-/* Blobs */
-.blob-cont {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: -2;
-  height: 500px;
-  width: 500px;
-  position: relative;
-  right: 5em;
-}
-
-.blob {
-  border-radius: 100px;
-  filter: blur(60px);
-}
-
 .yellow {
   position: absolute;
   /* top: 200px; */
   /* left: 100px; */
-  height: 16vh;
-  width: 16vw;
+  height: 20vh;
+  width: 60vw;
 
   animation: yellow 8s infinite ease;
 }
@@ -94,10 +18,10 @@ body::before {
   position: absolute;
   /* top: 0px; */
   /* right: 0vh; */
-  height: 16vh;
-  width: 16vw;
+  height: 20vh;
+  width: 60vw;
 
-  animation: 8s infinite ease;
+  animation: blue 8s infinite ease;
 }
 
 .red {
@@ -177,12 +101,6 @@ body::before {
     top: 250px;
     right: 0px;
     transform: scale(1);
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  body {
-    margin: 1em;
   }
 }
 </style>
