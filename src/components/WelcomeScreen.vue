@@ -19,9 +19,3 @@
 const test = 0;
 import UAFlag from './UAFlag.vue';
 </script>
-<style scoped>
-.bg-flag {
-  background-position: 100vh;
-  /* background-image: url('/Flag_of_Ukraine.png'); */
-}
-</style>

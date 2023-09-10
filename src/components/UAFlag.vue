@@ -1,9 +1,14 @@
 <template>
-  <div class="min-h-[10rem] blur-3xl bg-blue-500 blue"></div>
-  <div class="min-h-[10rem] blur-3xl bg-yellow-300 yellow"></div>
+  <div class="flag-element min-h-[10rem] blur-3xl bg-blue-500 blue"></div>
+  <div class="flag-element min-h-[10rem] blur-3xl bg-yellow-300 yellow"></div>
 </template>
 
 <style scoped>
+.blue,
+.yellow {
+  z-index: -2;
+}
+
 .yellow {
   position: absolute;
   /* top: 200px; */
